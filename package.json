@@ -1,0 +1,47 @@
+{
+  "name": "@ttungbmt/utils",
+  "version": "2.0.0",
+  "description": "Fast, generic JavaScript/node.js utility functions",
+  "keywords": [
+    "utils"
+  ],
+  "repository": "https://github.com/ttungbmt/react-fancytree",
+  "license": "MIT",
+  "author": "Truong Thanh Tung <ttungbmt@gmail.com>",
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "unpkg": "dist/index.umd.js",
+  "module": "dist/index.modern.js",
+  "source": "src/index.js",
+  "types": "dist/index.d.js",
+  "files": [
+    "dist/*.js",
+    "dist/*.js.map",
+    "src"
+  ],
+  "scripts": {
+    "build": "microbundle --no-compress",
+    "build:push": "run-s clean build push",
+    "clean": "rm -rf dist/*",
+    "dev": "microbundle watch",
+    "dev:push": "run-p dev push:watch",
+    "format": "prettier --write \"src/**/*.js\"",
+    "format:check": "prettier --list-different \"src/**/*.js\" \"docs/*/**.md\"",
+    "packages:upgrade": "yarn upgrade-interactive --latest",
+    "push": "yalc push",
+    "push:watch": "nodemon --watch dist --delay 500ms -x yarn push"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {
+    "microbundle": "^0.12.4",
+    "prettier": "^2.2.1"
+  },
+  "peerDependencies": {},
+  "publishConfig": {
+    "access": "public"
+  },
+  "amdName": "Utils"
+}
