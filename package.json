@@ -5,7 +5,7 @@
   "keywords": [
     "utils"
   ],
-  "repository": "https://github.com/ttungbmt/react-fancytree",
+  "repository": "https://github.com/ttungbmt/uitls-js",
   "license": "MIT",
   "author": "Truong Thanh Tung <ttungbmt@gmail.com>",
   "sideEffects": false,
